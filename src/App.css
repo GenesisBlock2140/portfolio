@@ -1,0 +1,127 @@
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Badge */
+
+.badge {
+  background-color: #6F1AB6;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 2px 15px;
+  margin-bottom: 5px;
+}
+
+.badge-small {
+  font-size: 17px;
+}
+
+.badge-medium {
+  font-size: 24px;
+}
+
+/* ProjectBox */
+
+.projectbox {
+  max-width: 318px;
+  height: auto;
+  background-color: #160923;
+  color: #fff;
+  border-radius: 25px;
+  padding: 16px;
+}
+
+.projectbox-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectbox-top > img {
+  width: 28px;
+  height: 28px;
+}
+
+.projectbox-top > a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.projectbox-name {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px;
+}
+
+.projectbox-desc {
+  font-size: 20px;
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.projectbox-badge {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2;
+}
+
+/* Header */
+
+.header-box {
+  height: 70px;
+}
+
+.header-box ol {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-box li {
+  margin: 0px 2%;
+}
+
+.header-box li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* LEFTBAR */
+
+.leftbar-box {
+  background-color: #6F1AB6;
+  width: 60px;
+  height: 170px;
+  border-radius: 100px;
+  padding-top: 20px;
+  position: fixed;
+  left: 10%;
+  top: 50%;
+}
+
+.leftbar-dotbox {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leftbar-dot {
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: block;
+}
