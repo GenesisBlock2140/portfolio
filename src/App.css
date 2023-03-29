@@ -3,6 +3,12 @@
   margin: 0 auto;
 }
 
+/* UTILS */
+
+.bold {
+  font-weight: bold;
+}
+
 /* Badge */
 
 .badge {
@@ -13,6 +19,7 @@
   border: none;
   padding: 2px 15px;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .badge-small {
@@ -85,7 +92,7 @@
   flex-wrap: wrap;
   list-style-type: none;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .header-box li {
@@ -100,13 +107,14 @@
 /* LEFTBAR */
 
 .leftbar-box {
+  display: none;
   background-color: #6F1AB6;
   width: 60px;
   height: 170px;
   border-radius: 100px;
   padding-top: 20px;
   position: fixed;
-  left: 10%;
+  left: 5%;
   top: 50%;
 }
 
@@ -124,4 +132,202 @@
   background-color: #fff;
   border-radius: 50%;
   display: block;
+}
+
+
+/* hero */
+
+.hero-box {
+  display: block;
+  background: url("./assets/fade-back-purple.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-right {
+  color: #fff;
+  margin: 0 auto;
+  animation: revealFromLeft 1s;
+}
+
+.hero-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: revealFromRight 1s;
+}
+
+.hero-left img {
+  border-radius: 200px;
+  width: 250px;
+}
+
+.hero-hi {
+  background: url("./assets//hello-bulle.png");
+  background-size: auto;
+  height: 78px;
+  width: 198px;
+  margin: 0;
+  animation: heroHiShowUp 1.2s ease-in;
+  z-index: -2;
+}
+
+.hero-hi > p {
+  color: #fff;
+  font-size: 32px;
+  margin: 3px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero-hi .hero-hi-emoji {
+  display: inline-block;
+  animation: emojiBonjour 1s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.hero-cmoi {
+  font-size: 24px;
+  margin: 0;
+}
+
+.hero-name {
+  font-size: 95px;
+  line-height: 1;
+  margin: 0;
+}
+
+.hero-desc {
+  font-size: 32px;
+}
+
+.hero-desc-second {
+  opacity: 0.8;
+}
+
+.hero-desc-alt {
+  animation: alternanceAnimate 4s linear;
+  animation-delay: 3s;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 30px;
+}
+
+/* COMPETENCES */
+
+.skills-icon {
+  color: #fff;
+  font-size: 80px;
+}
+
+.skills-box {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-title {
+  color: #fff;
+  font-size: 24px;
+}
+
+.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-items {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* MEDIA RESPONSIVE*/
+
+@media (min-width: 640px) { 
+  .hero-box{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .hero-left img {
+    width: 300px;
+  }
+
+}
+
+@media (min-width: 1024px) { 
+  .hero-box{
+    padding: 125px;
+  }
+
+  .leftbar-box {
+    display: block;
+  }
+}
+
+/* ANIMATION */
+
+@keyframes emojiBonjour {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes heroHiShowUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes alternanceAnimate {
+  0%{
+    color: #fff;
+    opacity: 0.2;
+  }
+  50% {
+    color: #8b00ff;
+    opacity: 1;
+  }
+  80% {
+    color: #fff;
+  }
+}
+
+@keyframes revealFromRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes revealFromLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
