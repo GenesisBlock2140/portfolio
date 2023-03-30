@@ -15,7 +15,7 @@ export const ProjectBox = ({website, githubRepo, name, description, tech}:Projec
     <div className='projectbox'>
       <div className='projectbox-top'>
         <a href={website} target="_blank" >{`${website ? "Voir le site" : ""}`}</a>
-        <a href={githubRepo}>
+        <a href={`https://github.com/${githubRepo}`} target="_blank">
           <img src={githubLogo} alt="github logo" />
         </a>
       </div>

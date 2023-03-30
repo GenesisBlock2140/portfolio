@@ -3,6 +3,23 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 36px;
+  color: #fff;
+}
+
+.titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 20px;
+}
+
 /* UTILS */
 
 .bold {
@@ -33,12 +50,14 @@
 /* ProjectBox */
 
 .projectbox {
+  display: block;
   max-width: 318px;
   height: auto;
   background-color: #160923;
   color: #fff;
   border-radius: 25px;
   padding: 16px;
+  margin: 20px auto;
 }
 
 .projectbox-top {
@@ -142,6 +161,7 @@
   background: url("./assets/fade-back-purple.png");
   background-repeat: no-repeat;
   background-position: center;
+  margin: 75px auto;
 }
 
 .hero-right {
@@ -219,8 +239,15 @@
 /* COMPETENCES */
 
 .skills-icon {
+  display: inline-block;
   color: #fff;
   font-size: 80px;
+  transition: 0.8s;
+}
+
+.skills-icon:hover {
+  color: #8b00ff;
+  transform: scale(1.4);
 }
 
 .skills-box {
@@ -244,7 +271,15 @@
   text-align: center;
   color: #fff;
   text-transform: capitalize;
+  width: 100px;
 }
+
+/* Skills Container */
+
+.allSkillsContainer {
+  margin: 100px 10px;
+}
+
 
 /* MEDIA RESPONSIVE*/
 
@@ -258,6 +293,11 @@
   .hero-left img {
     width: 300px;
   }
+
+  .projectContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }  
 
 }
 
@@ -329,5 +369,15 @@
   100% {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+
+@keyframes skillIconHover {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #8b00ff;
+    transform: scale(1.4);
   }
 }
